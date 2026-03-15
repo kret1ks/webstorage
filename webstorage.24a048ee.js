@@ -1,0 +1,6 @@
+let e=document.querySelector("#firstName"),t=document.querySelector("#lastName"),a=document.querySelector("#phone"),l=document.querySelector("#email"),u=document.querySelector("#saveBtn"),n=document.querySelector(".list"),s=JSON.parse(localStorage.getItem("contacts"))||[];function o(){n.innerHTML=s.map((e,t)=>`<li>
+            <strong>${e.firstName} ${e.lastName}</strong>: ${e.phone}
+            <button data-index="${t}" class="delete-btn">\u{412}\u{438}\u{434}\u{430}\u{43B}\u{438}\u{442}\u{438}</button>
+            <button data-index="${t}" class="edit-btn">\u{420}\u{435}\u{434}\u{430}\u{433}\u{443}\u{432}\u{430}\u{442}\u{438}</button>
+        </li>`).join("")}o(),u.addEventListener("click",()=>{let u={firstName:e.value,lastName:t.value,phone:a.value,email:l.value};s.push(u),localStorage.setItem("contacts",JSON.stringify(s)),o(),e.value="",t.value="",a.value="",l.value=""}),n.addEventListener("click",u=>{if(u.target.classList.contains("delete-btn")){let e=u.target.dataset.index;s.splice(e,1),localStorage.setItem("contacts",JSON.stringify(s)),o()}if(u.target.classList.contains("edit-btn")){let n=u.target.dataset.index,c=s[n];e.value=c.firstName,t.value=c.lastName,a.value=c.phone,l.value=c.email,s.splice(n,1),localStorage.setItem("contacts",JSON.stringify(s)),o()}});
+//# sourceMappingURL=webstorage.24a048ee.js.map
