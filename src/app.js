@@ -49,8 +49,6 @@ listRef.addEventListener("click", (event) => {
         localStorage.setItem("contacts", JSON.stringify(contacts))
         render()
     }
-
-
     if(event.target.classList.contains("edit-btn")){
         const index = event.target.dataset.index
         const contact = contacts[index];
