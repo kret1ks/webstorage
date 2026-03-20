@@ -148,73 +148,90 @@
 //     }
 // })
 
+/////////////////////////////////////////////////////////////////
 
 
 
-// const nameRef = document.querySelector(".name")
-// const surnameRef = document.querySelector(".surname")
-// const btnSave = document.querySelector(".save")
+// const nameRef = document.querySelector(".name");
+// const surname = document.querySelector(".surname");
+// const saveBtn = document.querySelector(".save");
+
+// let contacts = JSON.parse(localStorage.getItem("contacts")) || [];
 
 
-
-// let contacts = JSON.parse(localStorage.getItem("contacts")) || []
-
-
-// btnSave.addEventListener("click", () => {
-//  const newContact = {
+// saveBtn.addEventListener("click", () => {
+// const newContact = {
 //     name: nameRef.value,
-//     surname: surnameRef.value,
-//  }
+//     surname: surname.value,
+// }
 
-//  contacts.push(newContact)
+// contacts.push(newContact)
 
-//  localStorage.setItem("contacts", JSON.stringify(contacts))
+// localStorage.setItem("contacts", JSON.stringify(contacts))
 
-//  nameRef.value = "";
-//  surnameRef.value = "";
+// nameRef.value = "";
+// surname.value = "";
 // })
 
 
 ///////////////////////////////////////////////////////////////
 
 
-const timerRef = document.querySelector(".timer")
-const startRef = document.querySelector(".start")
-const stopRef = document.querySelector(".stop")
+// const timerRef = document.querySelector('.timer');
+// const startRef = document.querySelector('.start');
+// const stopRef = document.querySelector('.stop')
 
 
-let sec = 60
-let id = null;
+// let s = 20;
+// let id = null;
 
 
-startRef.addEventListener("click", () => {
-if(id) return;
-sec--
-timerRef.textContent = sec
-id = setInterval(() => {
-sec--
-timerRef.textContent = sec
+// startRef.addEventListener("click", () => {
+//     if(id)  return;
+//  id = setInterval(() => {
+//         s--
+//         timerRef.textContent = s
 
-if(sec === 0){
-    clearInterval(id)
-    id = null;
-}
+//         const minutes = Math.floor(s / 60).toString().padStart(2, "0")
+//         const second = (s % 60).toString().padStart(2, "0")
 
-if(sec === 10){
-    timerRef.classList.add("active")
-}
-},1000)
+//         timerRef.textContent = `${minutes}:${second}`
 
 
+//         if(s === 10){
+//             timerRef.classList.add("active")
+//         }
+
+//         if(s === 0){
+//             clearInterval(id)
+//             id = null;
+//         }
+//     },1000)
+// })
 
 
-})
+// stopRef.addEventListener("click", () => {
+//     clearInterval(id)
+//     id = null;
+// })
 
 
-stopRef.addEventListener("click", () => {
-clearInterval(id)
-id = null;
-})
+
+
+
+const titleRef = document.querySelector(".title")
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
