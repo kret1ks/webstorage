@@ -277,10 +277,11 @@ const listRef = document.querySelector(".js-list")
 
 function renderPlayers (playersToRender){
     const murkup = playersToRender.map((player) => {
-         `<li>${player}</li>`
+       return `<li>${player}</li>`
     }).join("");
     listRef.innerHTML = murkup
 }
+renderPlayers(players)
 
 nameRef.addEventListener("input", (event) => {
     const value = event.target.value.toLowerCase()
