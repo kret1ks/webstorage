@@ -219,15 +219,28 @@
 
 
 
-const titleRef = document.querySelector(".title")
+////////////////////////////////////////////////////////////////////////
 
 
 
+// const students = [
+//     { name: "Назарій", isOnline: true },
+//     { name: "Олександр", isOnline: false },
+//     { name: "Максим", isOnline: true },
+//     { name: "Дмитро", isOnline: false },
+//     { name: "Артем", isOnline: true }
+// ];
 
 
-
-
-
+// students.forEach((student) => {
+//     if(student.isOnline){
+//         console.log(`${student.name} зара вчиця`);
+//     } else{
+//         console.log(`${student.name} відпочиває`);
+        
+//     }
+    
+// })
 
 
 
