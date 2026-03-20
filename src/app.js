@@ -244,10 +244,46 @@
 
 
 
+////////////////////////////////////////////////////////////////////////////////////
 
 
 
 
 
+const players = [
+    "Vinicius Junior",
+    "Jude Bellingham",
+    "Kylian Mbappe",
+    "Federico Valverde",
+    "Rodrygo",
+    "Luka Modric",
+    "Eduardo Camavinga",
+    "Aurelien Tchouameni",
+    "Dani Carvajal",
+    "Thibaut Courtois",
+    "Antonio Rudiger",
+    "Arda Guler",
+    "Brahim Diaz",
+    "Endrick"
+];
 
+
+
+
+
+const nameRef = document.querySelector(".name")
+
+
+nameRef.addEventListener("input", (event) => {
+    const value = event.target.value.toLowerCase();
+
+   const filteredPlayers = players.filter((player) => {
+   
+        const lowerPlayer = player.toLowerCase();
+
+        return lowerPlayer.includes(value);   
+    })
+    console.log(filteredPlayers);
+    
+})
 
