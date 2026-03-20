@@ -272,18 +272,24 @@ const players = [
 
 
 const nameRef = document.querySelector(".name")
+const listRef = document.querySelector(".js-list")
 
+
+function renderPlayers (playersToRender){
+    const murkup = playersToRender.map((player) => {
+         `<li>${player}</li>`
+    }).join("");
+    listRef.innerHTML = murkup
+}
 
 nameRef.addEventListener("input", (event) => {
-    const value = event.target.value.toLowerCase();
+    const value = event.target.value.toLowerCase()
 
-   const filteredPlayers = players.filter((player) => {
-   
-        const lowerPlayer = player.toLowerCase();
-
-        return lowerPlayer.includes(value);   
-    })
-    console.log(filteredPlayers);
     
-})
+    const fillteredPlayers = players.filter((player) => {
+        const tolowerPlayer = player.toLowerCase();
+        return tolowerPlayer.includes(value)
+    })
 
+renderPlayers(fillteredPlayers)    
+})
